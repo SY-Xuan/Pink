@@ -20,6 +20,7 @@ The pretraining dataset used in this release is the same as in LLaVA which is a 
 
 ### Instruction Tuning Dataset
 ![Alt text](image.png)
+
 The datasets mentioned in the image need to be downloaded manually.
 
 - COCO: [train2017](http://images.cocodataset.org/zips/train2017.zip)
@@ -88,7 +89,8 @@ If you find Pink useful for your research and applications, please cite using th
 ```
 
 ## Acknowledgement
-LLaVA: the codebase we refer to.
+- [LLaVA](https://github.com/haotian-liu/LLaVA): the codebase we refer to.
+- [Shikra](https://github.com/shikras/shikra): the codebase we refer to.
 
 ## Related Projects
 [LocLLM](https://github.com/kennethwdk/LocLLM): We leverage LLM for the human keypoint localization. LocLLM shows remarkable performance on standard 2D/3D keypoint localization benchmarks. Moreover, incorporating language clues into the localization makes LocLLM show superior flexibility and generalizable capability in cross dataset keypoint localization, and even detecting novel type of keypoints unseen during training.
