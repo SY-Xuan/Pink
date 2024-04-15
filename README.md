@@ -1,5 +1,7 @@
 # Pink: Unveiling The Power of Referential Comprehension for Multi-modal LLMs. 
 
+![img](framework.png)
+
 ## Contents
 - [Data Download](#data-download)
 - [Install](#install)
@@ -65,7 +67,7 @@ We convert the *.json of Object365. Please refer to **dataset_generation/object3
 Please refer to **scripts/object365_generate.sh**.
 
 ### Self-consistent
-Please refer to **scripts/object365_filter.py**
+Please refer to **pink/eval/object365_filter.py**
 
 ## Evaluation
 Please refer to **inference.ipynb** and **scripts/eval_refcoco.sh**.
@@ -89,8 +91,7 @@ If you find Pink useful for your research and applications, please cite using th
 ```
 
 ## Acknowledgement
-- [LLaVA](https://github.com/haotian-liu/LLaVA): the codebase we refer to.
-- [Shikra](https://github.com/shikras/shikra): the codebase we refer to.
+This code inherits some codes from [LLaVA](https://github.com/haotian-liu/LLaVA) and [Shikra](https://github.com/shikras/shikra). Thanks for these outstanding implementations.
 
 ## Related Projects
 [LocLLM](https://github.com/kennethwdk/LocLLM): We leverage LLM for the human keypoint localization. LocLLM shows remarkable performance on standard 2D/3D keypoint localization benchmarks. Moreover, incorporating language clues into the localization makes LocLLM show superior flexibility and generalizable capability in cross dataset keypoint localization, and even detecting novel type of keypoints unseen during training.
