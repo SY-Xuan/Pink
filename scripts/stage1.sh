@@ -15,7 +15,7 @@ llava_cc3m_pretrain_image_folder=./
 # stage 1 multi-modal align
 
 OMP_NUM_THREADS=1 torchrun --nnodes=1 --nproc_per_node=8 --master_port=25002 \
-    llava/train/train.py \
+    pink/train/train.py \
     --model_name_or_path ${llama_path} \
     --llama_path ${llama_path} \
     --dataset_name LLaVACaptionDataset \

@@ -25,7 +25,7 @@ flickr_path=./
 object365_generate_file=./
 
 OMP_NUM_THREADS=1 torchrun --nnodes=1 --nproc_per_node=8 --master_port=25000 \
-    llava/train/train.py \
+    pink/train/train.py \
     --dataset_name VisualGenomeDataset:6@InstructCaptionDataset:6@VQAv2Dataset:6@AOKVQADataset:6@FlickrEntityDataset:6@Object365Dataset \
     --model_name_or_path ${output_dir} \
     --llama_path ${llama_path} \

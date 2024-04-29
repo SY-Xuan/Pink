@@ -23,7 +23,7 @@ a-okvqa_path=./
 flickr_path=./
 
 OMP_NUM_THREADS=1 torchrun --nnodes=1 --nproc_per_node=8 --master_port=25000 \
-    llava/train/train.py \
+    pink/train/train.py \
     --dataset_name VisualGenomeDataset@InstructCaptionDataset@VQAv2Dataset@AOKVQADataset@FlickrEntityDataset \
     --model_name_or_path ${output_dir} \
     --llama_path ${llama_path} \
