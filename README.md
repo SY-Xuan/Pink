@@ -1,4 +1,9 @@
 # Pink: Unveiling The Power of Referential Comprehension for Multi-modal LLMs. 
+[[`arXiv`](https://arxiv.org/pdf/2310.00582)][[`Paper`](https://openaccess.thecvf.com/content/CVPR2024/papers/Xuan_Pink_Unveiling_the_Power_of_Referential_Comprehension_for_Multi-modal_LLMs_CVPR_2024_paper.pdf)]
+
+> [Pink: Unveiling The Power of Referential Comprehension for Multi-modal LLMs](https://openaccess.thecvf.com/content/CVPR2024/html/Xuan_Pink_Unveiling_the_Power_of_Referential_Comprehension_for_Multi-modal_LLMs_CVPR_2024_paper.html)
+> Shiyu Xuan, Qingpei Guo, Ming Yang, Shiliang Zhang  
+> CVPR 2024
 
 ![img](framework.png)
 
@@ -52,19 +57,27 @@ pip install -e .
 
 ## Training
 ### Stage 1
-Please refer to **scripts/stage1.sh**.
+```shell
+    bash scripts/stage1.sh
+```
 
 ### Stage 2
-Please refer to **scripts/stage2.sh**.
+```shell
+    bash scripts/stage2.sh
+```
 
 ### Stage 2 with Object365
-Please refer to **scripts/stage2_with_object365.sh**.
+```shell
+    bash scripts/stage2_with_object365.sh
+```
 
 ## Self-consistent Bootstrapping
 We convert the *.json of Object365. Please refer to **dataset_generation/object365_detection.py**
 
 ### Bootstrapping
-Please refer to **scripts/object365_generate.sh**.
+```shell
+    bash scripts/object365_generate.sh
+```
 
 ### Self-consistent
 Please refer to **pink/eval/object365_filter.py**
@@ -82,16 +95,22 @@ python demo.py --checkpoint-path /path/to/pink --llama-path /path/to/llama2
 If you find Pink useful for your research and applications, please cite using this BibTeX:
 
 ```
-@article{xuan2023pink,
-  title={Pink: Unveiling the power of referential comprehension for multi-modal llms},
-  author={Xuan, Shiyu and Guo, Qingpei and Yang, Ming and Zhang, Shiliang},
-  journal={arXiv preprint arXiv:2310.00582},
-  year={2023}
+@InProceedings{Xuan_2024_CVPR,
+    author    = {Xuan, Shiyu and Guo, Qingpei and Yang, Ming and Zhang, Shiliang},
+    title     = {Pink: Unveiling the Power of Referential Comprehension for Multi-modal LLMs},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2024},
+    pages     = {13838-13848}
 }
 ```
 
 ## Acknowledgement
 This code inherits some codes from [LLaVA](https://github.com/haotian-liu/LLaVA) and [Shikra](https://github.com/shikras/shikra). Thanks for these outstanding implementations.
+
+## Contact me
+If you have any questions about this code or paper, feel free to contact me at
+shiyu_xuan@stu.pku.edu.cn.
 
 ## Related Projects
 [LocLLM](https://github.com/kennethwdk/LocLLM): We leverage LLM for the human keypoint localization. LocLLM shows remarkable performance on standard 2D/3D keypoint localization benchmarks. Moreover, incorporating language clues into the localization makes LocLLM show superior flexibility and generalizable capability in cross dataset keypoint localization, and even detecting novel type of keypoints unseen during training.
