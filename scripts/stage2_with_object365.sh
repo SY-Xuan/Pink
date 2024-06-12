@@ -31,7 +31,7 @@ OMP_NUM_THREADS=1 torchrun --nnodes=1 --nproc_per_node=8 --master_port=25000 \
     --llama_path ${llama_path} \
     --data_path ${visualgenome_region_descriptions_path}@${LLaVA-115K_path}@${vqav2_path}@${a-okvqa_path}@${flickr_path}@${object365_generate_file} \
     --image_folder ${visualgenome_dataset_path}@${coco_dataset_path}/train2017@${coco_dataset_path}@${coco_dataset_path}/train2017@${flickr_dataset_path}@${object365_dataset_path} \
-    --base_path ${path_to_base_path} \
+    --base_path ${base_path} \
     --vision_tower openai/clip-vit-large-patch14 \
     --task_pool RegionGroundingCaption,VisualGrounding,Relation,Counting,CoarseLocation,Detection \
     --conversation_template llamav2 \
