@@ -64,8 +64,8 @@ def _load_model_tokenizer(args):
         loaded_keys = weight_map_index["weight_map"].keys()
         state_dict = {}
         for index, shard_file in enumerate(shard_files):
-            state_dict.update(torch.load(os.path.join(llama_path, shard_file), map_location="cpu"))
-        peft_parameters = torch.load(os.path.join(model_name, "saved_parameters.pth"), map_location="cpu")
+            state_dict.update(torch.load(os.path.join(llama_path, shard_file), map_location="cpu", weights_only=True))
+        peft_parameters = torch.load(os.path.join(model_name, "saved_parameters.pth"), map_location="cpu", weights_only=True)
         for k, v in peft_parameters.items():
             state_dict[k] = v
     else:
